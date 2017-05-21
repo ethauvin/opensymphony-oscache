@@ -21,7 +21,7 @@
 
     <!-- import common osbuild.xml -->
     
-    <property name="common.build" value="../opensymphony/common/osbuild.xml"/>
+    <property name="common.build" value="osbuild.xml"/>
     <import file="${common.build}"/>
  
     <property name="clover.initstring" location="${build.clover}/coverageBase.db"/>

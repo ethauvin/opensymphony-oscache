@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+group = 'opensymphony'
+version = '2.4.2'
+
+description = 'OSCache'
+
+sourceCompatibility = 1.4
+targetCompatibility = 1.4
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'commons-logging', name: 'commons-logging', version:'1.1'
+    compile group: 'org.apache.geronimo.specs', name: 'geronimo-jms_1.1_spec', version: '1.1.1'
+    compile group: 'javax.transaction', name: 'jta', version: '1.1'
+    compile group: 'javax.servlet', name: 'servlet-api', version:'2.3'
+    compile group: 'jgroups', name: 'jgroups-all', version:'2.2.8'
+    compile group: 'org.hibernate', name: 'hibernate', version:'3.2.3.ga'
+    testCompile group: 'junit', name: 'junit', version:'3.8.2'
+    testCompile group: 'httpunit', name: 'httpunit', version:'1.6'
+    testCompile group: 'junitperf', name: 'junitperf', version:'1.9.1'
+    testCompile group: 'groboutils', name: 'groboutils-core', version:'5'
+}
