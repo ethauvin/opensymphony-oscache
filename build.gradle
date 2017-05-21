@@ -8,6 +8,8 @@ defaultTasks 'assemble'
 
 repositories {
     mavenCentral()
+    maven { url 'http://repository.jboss.org/nexus/content/groups/public-jboss/' }
+    maven { url 'http://download.osgeo.org/webdav/geotools/' }
 }
 
 dependencies {
@@ -20,7 +22,7 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version:'3.8.2'
     testCompile group: 'httpunit', name: 'httpunit', version:'1.6'
     testCompile group: 'junitperf', name: 'junitperf', version:'1.9.1'
-    testCompile group: 'groboutils', name: 'groboutils-core', version:'5'
+    testCompile group: 'net.sourceforge.groboutils', name: 'groboutils-core', version:'5'
 }
 
 compileJava {
