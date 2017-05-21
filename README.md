@@ -1,0 +1,1 @@
+Modified version of [OpenSymphony's OSCache](https://bitbucket.org/opensymphony/oscache/) with support for automatically generating keys that take in consideration the server port (HTTP, HTTPS).
