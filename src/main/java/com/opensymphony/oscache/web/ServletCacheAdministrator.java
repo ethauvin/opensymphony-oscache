@@ -8,18 +8,15 @@ import com.opensymphony.oscache.base.*;
 import com.opensymphony.oscache.base.events.ScopeEvent;
 import com.opensymphony.oscache.base.events.ScopeEventListener;
 import com.opensymphony.oscache.base.events.ScopeEventType;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-import java.io.Serializable;
-
-import java.util.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
+import java.io.Serializable;
+import java.util.*;
 
 /**
  * A ServletCacheAdministrator creates, flushes and administers the cache.
@@ -549,7 +546,7 @@ public class ServletCacheAdministrator extends AbstractCacheAdministrator implem
 
         // Servers for multiple host domains need this distinction in the key
         if (useHostDomainInKey) {
-            cBuffer.append(FILE_SEPARATOR).append(request.getServerName());
+            cBuffer.append(FILE_SEPARATOR).append(request.getServerName()).append(":").append(request.getServerPort());
         }
 
         if (key != null) {
