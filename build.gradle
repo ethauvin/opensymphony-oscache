@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group = 'opensymphony'
-version = '2.4.2'
+version = '2.4.3-ect'
 description = 'OSCache'
 
 defaultTasks 'assemble'
@@ -27,4 +27,12 @@ dependencies {
 
 compileJava {
     // options.compilerArgs << '-Xlint:deprecation'
+}
+
+jar {
+    manifest {
+        attributes("Implementation-Title": project.description,
+                   "Implementation-Version": version,
+                   "Implementation-Vendor": "OpenSymphony")
+    }
 }
