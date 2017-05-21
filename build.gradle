@@ -5,9 +5,6 @@ version = '2.4.2'
 
 description = 'OSCache'
 
-sourceCompatibility = 1.4
-targetCompatibility = 1.4
-
 repositories {
     mavenCentral()
 }
@@ -23,4 +20,8 @@ dependencies {
     testCompile group: 'httpunit', name: 'httpunit', version:'1.6'
     testCompile group: 'junitperf', name: 'junitperf', version:'1.9.1'
     testCompile group: 'groboutils', name: 'groboutils-core', version:'5'
+}
+
+compileJava {
+    // options.compilerArgs << '-Xlint:deprecation'
 }

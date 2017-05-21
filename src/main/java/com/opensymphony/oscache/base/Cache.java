@@ -10,17 +10,13 @@ import com.opensymphony.oscache.base.algorithm.UnlimitedCache;
 import com.opensymphony.oscache.base.events.*;
 import com.opensymphony.oscache.base.persistence.PersistenceListener;
 import com.opensymphony.oscache.util.FastCronParser;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.io.Serializable;
-
-import java.text.ParseException;
-
-import java.util.*;
-
 import javax.swing.event.EventListenerList;
+import java.io.Serializable;
+import java.text.ParseException;
+import java.util.*;
 
 /**
  * Provides an interface to the cache itself. Creating an instance of this class
@@ -356,8 +352,8 @@ public class Cache implements Serializable {
      * @since 2.4
      */
     public void addCacheEventListener(CacheEventListener listener) {
-        // listenerList.add(CacheEventListener.class, listener);
-        listenerList.add(listener.getClass(), listener);
+        listenerList.add(CacheEventListener.class, listener);
+        // listenerList.add(listener.getClass(), listener);
     }
     
     /**
@@ -669,8 +665,8 @@ public class Cache implements Serializable {
      * @since 2.4
      */
     public void removeCacheEventListener(CacheEventListener listener) {
-        // listenerList.remove(CacheEventListener.class, listener);
-        listenerList.remove(listener.getClass(), listener);
+        listenerList.remove(CacheEventListener.class, listener);
+        // listenerList.remove(listener.getClass(), listener);
     }
 
     /**
