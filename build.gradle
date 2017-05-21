@@ -2,8 +2,9 @@ apply plugin: 'java'
 
 group = 'opensymphony'
 version = '2.4.2'
-
 description = 'OSCache'
+
+defaultTasks 'assemble'
 
 repositories {
     mavenCentral()
